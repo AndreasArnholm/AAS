@@ -1,7 +1,7 @@
-import { useState, useEffect} from 'react';
-import { Paper, withStyles, Grid, Button, Slider } from '@material-ui/core';
+import { useState, useEffect} from 'react' 
+import { Paper, withStyles, Grid, Button, Slider } from '@material-ui/core' 
 import { ArrowUpwardRounded, ArrowDownwardRounded, ArrowBack, ArrowForward, RotateLeft, RotateRight, ThumbUpSharp} from '@material-ui/icons'
-import axios from 'axios';
+import axios from 'axios' 
 import configs from '../../config.json'
 
 const styles = theme => ({
@@ -11,21 +11,31 @@ const styles = theme => ({
     padding: {
         padding: theme.spacing(1)
     }
-});
+}) 
+
+const defaultColor = "white"
+const pressColor = "gray"
 
 function KMPController(props) {
     const [speed, setSpeed] = useState(0.1)
     const [enabled, setEnabled] = useState(false)
-
+    
+    const [upColor, setUpColor] = useState(defaultColor)
+    const [downColor, setDownColor] = useState(defaultColor)
+    const [leftColor, setLeftColor] = useState(defaultColor)
+    const [rightColor, setRightColor] = useState(defaultColor)
+    const [counterClockwiseColor, setCounterClockwiseColor] = useState(defaultColor)
+    const [clockwiseColor, setClockwiseColor] = useState(defaultColor)
+    
     useEffect(() => {
         axios.get(configs.API_URL + "robots/1").then(resp => {
             setEnabled(resp.data.kmp)
-        });
+        }) 
     })
 
     const handleOnChangeSpeed = (event, newValue) => {
         setSpeed(newValue)
-    };
+    } 
 
     const moveKMP = (direction) => {
         var vector = null
@@ -55,83 +65,73 @@ function KMPController(props) {
         axios.post(configs.API_URL + "commands/", { "command" : "kmp:" + speed + vector})
     }
 
-    const defaultColor = "white"
-    const pressColor = "gray"
-
-    const [upColor, setUpColor] = useState(defaultColor)
-    const [downColor, setDownColor] = useState(defaultColor)
-    const [leftColor, setLeftColor] = useState(defaultColor)
-    const [rightColor, setRightColor] = useState(defaultColor)
-    const [counterClockwiseColor, setCounterClockwiseColor] = useState(defaultColor)
-    const [clockwiseColor, setClockwiseColor] = useState(defaultColor)
-
     document.onkeydown = function(event) {
         if (event.key == 'ArrowUp' && upColor==defaultColor) {
             moveKMP("up")
             console.log("ArrowUp pressed")
             setUpColor(pressColor)
-        };
+        } 
         if (event.key == 'ArrowDown' && downColor==defaultColor) {
             moveKMP("down")
             console.log("ArrowDown pressed")
             setDownColor(pressColor)
-        };
+        } 
         if (event.key == 'ArrowLeft' && leftColor==defaultColor) {
             moveKMP("left")
             console.log("ArrowLeft pressed")
             setLeftColor(pressColor)
-        };
+        } 
         if (event.key == 'ArrowRight' && rightColor==defaultColor) {
             moveKMP("right")
             console.log("ArrowRight pressed")
             setRightColor(pressColor)
-        };
+        } 
         if (event.key == 'o' && counterClockwiseColor==defaultColor) {
             moveKMP("counter-clockwise")
             console.log("CounterClockwise pressed")
             setCounterClockwiseColor(pressColor)
-        };
+        } 
         if (event.key == 'p' && clockwiseColor==defaultColor) {
             moveKMP("clockwise")
             console.log("clockwise pressed")
             setClockwiseColor(pressColor)
-        };
-    };
+        } 
+    } 
 
     document.onkeyup = function(event) {
         if (event.key == 'ArrowUp') {
             moveKMP("stop")
             console.log("ArrowUp released")
             setUpColor(defaultColor)
-        };
+        } 
         if (event.key == 'ArrowDown') {
             moveKMP("stop")
             console.log("ArrowDown released")
             setDownColor(defaultColor)
-        };
+        } 
         if (event.key == 'ArrowLeft') {
             moveKMP("stop")
             console.log("ArrowLeft released")
             setLeftColor(defaultColor)
-        };
+        } 
         if (event.key == 'ArrowRight') {
             moveKMP("stop")
             console.log("ArrowRight released")
             setRightColor(defaultColor)
-        };
+        } 
         if (event.key == 'o') {
             moveKMP("stop")
             console.log("CounterClockwise released")
             setCounterClockwiseColor(defaultColor)
-        };
+        } 
         if (event.key == 'p') {
             moveKMP("stop")
             console.log("clockwise released")
             setClockwiseColor(defaultColor)
-        };
-    };
+        } 
+    } 
 
-    const { classes } = props;
+    const { classes } = props 
     return (
         <Paper className={classes.padding}>
             <Grid container justify="center">
@@ -172,7 +172,7 @@ function KMPController(props) {
                 </Grid>
             </div>
         </Paper>
-    );
+    ) 
     
 }
 
