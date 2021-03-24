@@ -1,3 +1,4 @@
+from io import BytesIO
 import sys
 sys.path.insert(0, "..")
 import logging
@@ -9,6 +10,8 @@ from opcua import ua, Server, uamethod
 from .models import Robot
 import json
 
+from cv2 import cv2 as cv
+import numpy as np
 
 class RequestMiddleware:
     def __init__(self, get_response):
@@ -68,7 +71,15 @@ class RequestMiddleware:
                 'component' : component,
                 'component_status' : bool(int(component_status))
             }
-        )     
+        )  
+
+    @uamethod
+    def receive_image(self, parent, bytes):        
+        frame = BytesIO(bytes)
+        loaded_frame = np.load(frame, allow_pickle=True)
+
+        cv.imshow("WINDOW", loaded_frame)
+        cv.waitKey(3)
 
     def main(self):
         logging.basicConfig(level=logging.WARN)
@@ -94,6 +105,7 @@ class RequestMiddleware:
         myobj = objects.add_object(idx, "MyObject")
         status_node = myobj.add_method(idx, "update_status", self.update_status, [ua.VariantType.String], [ua.VariantType.Int64])
         print(status_node)
+        image_node = myobj.add_method(idx, "update_frame", self.receive_image)
         
         lbrEvent = server.create_custom_event_type(idx, 'LBREvent')
         kmpEvent = server.create_custom_event_type(idx, 'KMPEvent')
