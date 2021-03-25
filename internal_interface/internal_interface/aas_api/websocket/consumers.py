@@ -40,3 +40,23 @@ class UpdateConsumer(WebsocketConsumer):
             'component' : component,
             'component_status' : component_status
         }))
+
+class StreamConsumer(WebsocketConsumer):
+    def connect(self):
+        self.room_group_name = 'stream_update'
+        async_to_sync(self.channel_layer.group_add)(
+            self.room_group_name,
+            self.channel_name
+        )
+        self.accept()
+
+    def disconnect(self, close_code):
+        self.close()
+        async_to_sync(self.channel_layer.group_discard)(
+            self.room_group_name,
+            self.channel_name
+        )
+
+    def send_frame(self, event):
+        frame = event['frame']
+        self.send(frame)

@@ -39,6 +39,7 @@ function App(props) {
   const [kmpStatus, setKmpStatus] = useState(false);
   const [lbrStatus, setLbrStatus] = useState(false);
   const [componentsOpen, setComponentsOpen] = useState(false)
+  const [image, setImage] = useState("")
 
   const handleComponentsOpen = () => {
     setComponentsOpen(true);
@@ -58,11 +59,25 @@ function App(props) {
           error: [throwError]
       } 
     });
+
+    new Sarus({
+      url: configs.WS_URL + "stream/",
+      eventListeners: {
+          open: [streamConnectionOpened],
+          message: [updateFrame],
+          close: [streamConnectionClosed],
+          error: [throwError]
+      } 
+    });
   }, [])
   
   const connectionOpened = () => console.log("Socket connection opened");
 
   const connectionClosed = () => console.log("Socket connection closed");
+
+  const streamConnectionOpened = () => console.log("Stream socket connection opened");
+
+  const streamConnectionClosed = () => console.log("Stream socket connection closed");
 
   const throwError = error => {
       throw error;
@@ -81,6 +96,10 @@ function App(props) {
           }
         }
   }, [])
+
+  const updateFrame= useCallback((frame) => {
+    setImage(frame.data)
+}, [])
 
   const { classes } = props
   return (
@@ -103,6 +122,7 @@ function App(props) {
             </Grid>
           ))}
         </Grid>
+          <Grid><img src={`data:image/png;base64,${image}`}/></Grid>
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
@@ -120,7 +140,7 @@ function App(props) {
               <KMR kmp={kmpStatus} lbr={lbrStatus} close={handleComponentsClose}/>  
             </div>
           </Fade>
-        </Modal>  
+        </Modal>
       </div>
     )
 }

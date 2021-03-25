@@ -12,6 +12,9 @@ import json
 
 from cv2 import cv2 as cv
 import numpy as np
+import png
+import base64
+import io
 
 class RequestMiddleware:
     def __init__(self, get_response):
@@ -71,15 +74,30 @@ class RequestMiddleware:
                 'component' : component,
                 'component_status' : bool(int(component_status))
             }
-        )  
+        )
+
+    async def send_frame(self, frame):
+        channel_layer = get_channel_layer()
+        await channel_layer.group_send(
+            'stream_update',
+            {
+                'type' : 'send_frame',
+                'frame' : frame
+            }
+        )
 
     @uamethod
     def receive_image(self, parent, bytes):        
-        frame = BytesIO(bytes)
-        loaded_frame = np.load(frame, allow_pickle=True)
+        byte_frame = BytesIO(bytes)
+        loaded_frame = np.load(byte_frame, allow_pickle=True)
 
-        cv.imshow("WINDOW", loaded_frame)
-        cv.waitKey(3)
+        is_success, im_buf_arr = cv.imencode(".jpg", loaded_frame)
+        jpg_as_text = base64.b64encode(im_buf_arr)
+
+        loop = asyncio.get_running_loop()
+        loop.create_task(self.send_frame(jpg_as_text.decode('utf-8')))
+        #cv.imshow("WINDOW", loaded_frame)
+        #cv.waitKey(3)
 
     def main(self):
         logging.basicConfig(level=logging.WARN)
