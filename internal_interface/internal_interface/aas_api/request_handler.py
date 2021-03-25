@@ -12,9 +12,7 @@ import json
 
 from cv2 import cv2 as cv
 import numpy as np
-import png
 import base64
-import io
 
 class RequestMiddleware:
     def __init__(self, get_response):
