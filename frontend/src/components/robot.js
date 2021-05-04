@@ -12,6 +12,9 @@ import Slide from '@material-ui/core/Slide'
 import axios from 'axios'
 import configs from '../config.json'
 
+// Import worker for testing
+import worker from 'workerize-loader!./../testWorker' // eslint-disable-line import/no-webpack-loader-syntax
+
 const Transition =  forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />
 })
@@ -130,6 +133,19 @@ function reducer(state, action){
       setAlertOpen(false)
     }
 
+    const handleTest = () => {
+      const testWorker = worker()
+      // testWorker.addEventListener('message', (message) => {
+      //   console.log(message.data)
+      // })
+      // testWorker.runTests(2)
+      testWorker.postMessage({val: 5})
+      testWorker.onerror = (err) => err
+      testWorker.onmessage = (e) => {
+        console.log(e.data)
+      }
+    }
+
     useEffect(() => {
       dispatch({type: 'update', 
                 components: props.robot.components})
@@ -161,6 +177,7 @@ function reducer(state, action){
           state={robotState}
           handleCameraEvent={handleCameraEvent}
           handleCameraIconEvent={handleCameraIconEvent}
+          handleTest={handleTest}
         />
         <Dialog
           open={alertOpen}

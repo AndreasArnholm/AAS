@@ -41,6 +41,11 @@ function RobotComponents(props) {
                         <Grid item>
                             <KMRGeneralCommands ws={props.ws}/>
                         </Grid>
+                        <Grid item>
+                            <Button onClick={props.handleTest}>
+                                test
+                            </Button>
+                        </Grid>
                     </Grid>
                 }
 

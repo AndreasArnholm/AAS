@@ -129,6 +129,10 @@ def receive_shutdown(cmd):
     middleware.send_to_entity('kmp:shutdown' + "," + cmd['rid'])
     middleware_send_camera_event({'camera_event': 'stop', 'rid': cmd['rid']})
 
+@socketio.on('worker')
+def receive_from_worker(cmd):
+    print(cmd["command"])
+
 def middleware_send_camera_event(cmd):
     robot = models.Robot.query.filter_by(id=cmd['rid']).first_or_404()
     middleware.send_to_camera(cmd['camera_event'] + "," + cmd['rid'] + "," + robot.udp_url + "," + str(robot.stream_port))
