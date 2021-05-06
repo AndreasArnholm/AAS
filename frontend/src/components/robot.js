@@ -139,7 +139,7 @@ function reducer(state, action){
       //   console.log(message.data)
       // })
       // testWorker.runTests(2)
-      testWorker.postMessage({val: 200})
+      testWorker.postMessage({val: 3600})
       testWorker.onerror = (err) => err
       testWorker.onmessage = (e) => {
         console.log(e.data)
