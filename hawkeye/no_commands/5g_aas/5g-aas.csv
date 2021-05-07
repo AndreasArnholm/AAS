@@ -1,0 +1,352 @@
+"Test Information",Value
+"RUN ID",489
+"END EXECUTION TIME","2021-05-07 11:16:08"
+"SOURCE PROBE NAME",raspberrypi-5G
+"SOURCE PROBE TEST IP ADDRESS",raspberrypi-5G
+"SOURCE PROBE MANAGEMENT IP ADDRESS",raspberrypi-5G
+"SOURCE PROBE GROUP",Administrators
+"DESTINATION PROBE NAME",raspberrypi-AAS
+"DESTINATION PROBE TEST IP ADDRESS",raspberrypi-AAS
+"DESTINATION PROBE MANAGEMENT IP ADDRESS",raspberrypi-AAS
+"DESTINATION PROBE GROUP",Administrators
+"DESTINATION PROBE LOCATION",
+"TEST MODULE",MESH
+"TEST TYPE","Network KPI"
+"TEST ADDITIONAL INFORMATION"," DSCP Setting: Best Effort"
+"TEST DURATION",120
+"TEST STATUS",Failed
+"FAIL OR ERROR REASON"," Threshold failed on KPI from->to Jitter Max (ms) 
+ Threshold failed on KPI from->to Max Delay Variation (ms) 
+"
+
+Metric,"Pair Name",Value,"Threshold Type",Threshold,"Status KPI"
+"Datagrams Out of Order","KPI from->to",0.0,0,>=,Passed
+"Delay (ms)","KPI from->to",21.88,0,<=,Passed
+"Jitter (ms)","KPI from->to",2.8,0,<=,Passed
+"Jitter Max (ms)","KPI from->to",8.0,0,<=,Failed
+Loss,"KPI from->to",0.0,0,<=,Passed
+"Max Delay Variation (ms)","KPI from->to",65.0,0,<=,Failed
+"Max loss burst","KPI from->to",0.0,0,<=,Passed
+MOS,"KPI from->to",4.35,1,<=,Passed
+
+Metric,"Pair Name",Timestamp,Value
+Loss,"KPI from->to",2,0
+Loss,"KPI from->to",4,0
+Loss,"KPI from->to",6,0
+Loss,"KPI from->to",8,0
+Loss,"KPI from->to",10,0
+Loss,"KPI from->to",12,0
+Loss,"KPI from->to",14,0
+Loss,"KPI from->to",16,0
+Loss,"KPI from->to",18,0
+Loss,"KPI from->to",20,0
+Loss,"KPI from->to",22,0
+Loss,"KPI from->to",24,0
+Loss,"KPI from->to",26,0
+Loss,"KPI from->to",28,0
+Loss,"KPI from->to",30,0
+Loss,"KPI from->to",32,0
+Loss,"KPI from->to",34,0
+Loss,"KPI from->to",36,0
+Loss,"KPI from->to",38,0
+Loss,"KPI from->to",40,0
+Loss,"KPI from->to",42,0
+Loss,"KPI from->to",44,0
+Loss,"KPI from->to",46,0
+Loss,"KPI from->to",48,0
+Loss,"KPI from->to",50,0
+Loss,"KPI from->to",52,0
+Loss,"KPI from->to",54,0
+Loss,"KPI from->to",56,0
+Loss,"KPI from->to",58,0
+Loss,"KPI from->to",60,0
+Loss,"KPI from->to",62,0
+Loss,"KPI from->to",64,0
+Loss,"KPI from->to",66,0
+Loss,"KPI from->to",68,0
+Loss,"KPI from->to",70,0
+Loss,"KPI from->to",72,0
+Loss,"KPI from->to",74,0
+Loss,"KPI from->to",76,0
+Loss,"KPI from->to",78,0
+Loss,"KPI from->to",80,0
+Loss,"KPI from->to",82,0
+Loss,"KPI from->to",84,0
+Loss,"KPI from->to",86,0
+Loss,"KPI from->to",88,0
+Loss,"KPI from->to",90,0
+Loss,"KPI from->to",92,0
+Loss,"KPI from->to",94,0
+Loss,"KPI from->to",96,0
+Loss,"KPI from->to",98,0
+Loss,"KPI from->to",100,0
+
+Metric,"Pair Name",Timestamp,Value
+"Jitter (ms)","KPI from->to",102,2
+"Jitter (ms)","KPI from->to",104,2
+"Jitter (ms)","KPI from->to",106,3
+"Jitter (ms)","KPI from->to",108,2
+"Jitter (ms)","KPI from->to",110,3
+"Jitter (ms)","KPI from->to",112,3
+"Jitter (ms)","KPI from->to",114,4
+"Jitter (ms)","KPI from->to",116,4
+"Jitter (ms)","KPI from->to",118,3
+"Jitter (ms)","KPI from->to",120,2
+
+Metric,"Pair Name",Timestamp,Value
+MOS,"KPI from->to",102,4.36
+MOS,"KPI from->to",104,4.36
+MOS,"KPI from->to",106,4.36
+MOS,"KPI from->to",108,4.36
+MOS,"KPI from->to",110,4.36
+MOS,"KPI from->to",112,4.36
+MOS,"KPI from->to",114,4.36
+MOS,"KPI from->to",116,4.36
+MOS,"KPI from->to",118,4.36
+MOS,"KPI from->to",120,4.36
+
+Metric,"Pair Name",Timestamp,Value
+"Delay (ms)","KPI from->to",102,20
+"Delay (ms)","KPI from->to",104,19
+"Delay (ms)","KPI from->to",106,20
+"Delay (ms)","KPI from->to",108,21
+"Delay (ms)","KPI from->to",110,25
+"Delay (ms)","KPI from->to",112,25
+"Delay (ms)","KPI from->to",114,21
+"Delay (ms)","KPI from->to",116,21
+"Delay (ms)","KPI from->to",118,21
+"Delay (ms)","KPI from->to",120,23
+
+Metric,"Pair Name",Timestamp,Value
+"Jitter (ms)","KPI from->to",2,2
+"Jitter (ms)","KPI from->to",4,3
+"Jitter (ms)","KPI from->to",6,3
+"Jitter (ms)","KPI from->to",8,1
+"Jitter (ms)","KPI from->to",10,3
+"Jitter (ms)","KPI from->to",12,2
+"Jitter (ms)","KPI from->to",14,2
+"Jitter (ms)","KPI from->to",16,3
+"Jitter (ms)","KPI from->to",18,3
+"Jitter (ms)","KPI from->to",20,2
+"Jitter (ms)","KPI from->to",22,2
+"Jitter (ms)","KPI from->to",24,3
+"Jitter (ms)","KPI from->to",26,1
+"Jitter (ms)","KPI from->to",28,3
+"Jitter (ms)","KPI from->to",30,4
+"Jitter (ms)","KPI from->to",32,3
+"Jitter (ms)","KPI from->to",34,3
+"Jitter (ms)","KPI from->to",36,3
+"Jitter (ms)","KPI from->to",38,2
+"Jitter (ms)","KPI from->to",40,2
+"Jitter (ms)","KPI from->to",42,5
+"Jitter (ms)","KPI from->to",44,1
+"Jitter (ms)","KPI from->to",46,4
+"Jitter (ms)","KPI from->to",48,4
+"Jitter (ms)","KPI from->to",50,8
+"Jitter (ms)","KPI from->to",52,3
+"Jitter (ms)","KPI from->to",54,3
+"Jitter (ms)","KPI from->to",56,4
+"Jitter (ms)","KPI from->to",58,2
+"Jitter (ms)","KPI from->to",60,3
+"Jitter (ms)","KPI from->to",62,2
+"Jitter (ms)","KPI from->to",64,2
+"Jitter (ms)","KPI from->to",66,1
+"Jitter (ms)","KPI from->to",68,2
+"Jitter (ms)","KPI from->to",70,3
+"Jitter (ms)","KPI from->to",72,3
+"Jitter (ms)","KPI from->to",74,2
+"Jitter (ms)","KPI from->to",76,3
+"Jitter (ms)","KPI from->to",78,4
+"Jitter (ms)","KPI from->to",80,3
+"Jitter (ms)","KPI from->to",82,1
+"Jitter (ms)","KPI from->to",84,4
+"Jitter (ms)","KPI from->to",86,2
+"Jitter (ms)","KPI from->to",88,4
+"Jitter (ms)","KPI from->to",90,5
+"Jitter (ms)","KPI from->to",92,3
+"Jitter (ms)","KPI from->to",94,2
+"Jitter (ms)","KPI from->to",96,3
+"Jitter (ms)","KPI from->to",98,2
+"Jitter (ms)","KPI from->to",100,2
+
+Metric,"Pair Name",Timestamp,Value
+"Max Delay Variation (ms)","KPI from->to",102,17
+"Max Delay Variation (ms)","KPI from->to",104,12
+"Max Delay Variation (ms)","KPI from->to",106,10
+"Max Delay Variation (ms)","KPI from->to",108,14
+"Max Delay Variation (ms)","KPI from->to",110,12
+"Max Delay Variation (ms)","KPI from->to",112,12
+"Max Delay Variation (ms)","KPI from->to",114,16
+"Max Delay Variation (ms)","KPI from->to",116,24
+"Max Delay Variation (ms)","KPI from->to",118,10
+"Max Delay Variation (ms)","KPI from->to",120,9
+
+Metric,"Pair Name",Timestamp,Value
+"Delay (ms)","KPI from->to",2,22
+"Delay (ms)","KPI from->to",4,22
+"Delay (ms)","KPI from->to",6,22
+"Delay (ms)","KPI from->to",8,23
+"Delay (ms)","KPI from->to",10,23
+"Delay (ms)","KPI from->to",12,22
+"Delay (ms)","KPI from->to",14,25
+"Delay (ms)","KPI from->to",16,24
+"Delay (ms)","KPI from->to",18,24
+"Delay (ms)","KPI from->to",20,21
+"Delay (ms)","KPI from->to",22,21
+"Delay (ms)","KPI from->to",24,18
+"Delay (ms)","KPI from->to",26,20
+"Delay (ms)","KPI from->to",28,21
+"Delay (ms)","KPI from->to",30,21
+"Delay (ms)","KPI from->to",32,21
+"Delay (ms)","KPI from->to",34,19
+"Delay (ms)","KPI from->to",36,19
+"Delay (ms)","KPI from->to",38,23
+"Delay (ms)","KPI from->to",40,23
+"Delay (ms)","KPI from->to",42,23
+"Delay (ms)","KPI from->to",44,25
+"Delay (ms)","KPI from->to",46,24
+"Delay (ms)","KPI from->to",48,25
+"Delay (ms)","KPI from->to",50,20
+"Delay (ms)","KPI from->to",52,20
+"Delay (ms)","KPI from->to",54,26
+"Delay (ms)","KPI from->to",56,23
+"Delay (ms)","KPI from->to",58,23
+"Delay (ms)","KPI from->to",60,23
+"Delay (ms)","KPI from->to",62,21
+"Delay (ms)","KPI from->to",64,22
+"Delay (ms)","KPI from->to",66,21
+"Delay (ms)","KPI from->to",68,21
+"Delay (ms)","KPI from->to",70,22
+"Delay (ms)","KPI from->to",72,21
+"Delay (ms)","KPI from->to",74,22
+"Delay (ms)","KPI from->to",76,23
+"Delay (ms)","KPI from->to",78,22
+"Delay (ms)","KPI from->to",80,22
+"Delay (ms)","KPI from->to",82,23
+"Delay (ms)","KPI from->to",84,23
+"Delay (ms)","KPI from->to",86,22
+"Delay (ms)","KPI from->to",88,22
+"Delay (ms)","KPI from->to",90,20
+"Delay (ms)","KPI from->to",92,21
+"Delay (ms)","KPI from->to",94,21
+"Delay (ms)","KPI from->to",96,22
+"Delay (ms)","KPI from->to",98,20
+"Delay (ms)","KPI from->to",100,20
+
+Metric,"Pair Name",Timestamp,Value
+Loss,"KPI from->to",102,0
+Loss,"KPI from->to",104,0
+Loss,"KPI from->to",106,0
+Loss,"KPI from->to",108,0
+Loss,"KPI from->to",110,0
+Loss,"KPI from->to",112,0
+Loss,"KPI from->to",114,0
+Loss,"KPI from->to",116,0
+Loss,"KPI from->to",118,0
+Loss,"KPI from->to",120,0
+
+Metric,"Pair Name",Timestamp,Value
+"Max Delay Variation (ms)","KPI from->to",2,12
+"Max Delay Variation (ms)","KPI from->to",4,9
+"Max Delay Variation (ms)","KPI from->to",6,13
+"Max Delay Variation (ms)","KPI from->to",8,13
+"Max Delay Variation (ms)","KPI from->to",10,19
+"Max Delay Variation (ms)","KPI from->to",12,16
+"Max Delay Variation (ms)","KPI from->to",14,13
+"Max Delay Variation (ms)","KPI from->to",16,24
+"Max Delay Variation (ms)","KPI from->to",18,24
+"Max Delay Variation (ms)","KPI from->to",20,14
+"Max Delay Variation (ms)","KPI from->to",22,12
+"Max Delay Variation (ms)","KPI from->to",24,14
+"Max Delay Variation (ms)","KPI from->to",26,13
+"Max Delay Variation (ms)","KPI from->to",28,15
+"Max Delay Variation (ms)","KPI from->to",30,11
+"Max Delay Variation (ms)","KPI from->to",32,13
+"Max Delay Variation (ms)","KPI from->to",34,14
+"Max Delay Variation (ms)","KPI from->to",36,10
+"Max Delay Variation (ms)","KPI from->to",38,13
+"Max Delay Variation (ms)","KPI from->to",40,12
+"Max Delay Variation (ms)","KPI from->to",42,17
+"Max Delay Variation (ms)","KPI from->to",44,13
+"Max Delay Variation (ms)","KPI from->to",46,12
+"Max Delay Variation (ms)","KPI from->to",48,9
+"Max Delay Variation (ms)","KPI from->to",50,24
+"Max Delay Variation (ms)","KPI from->to",52,20
+"Max Delay Variation (ms)","KPI from->to",54,12
+"Max Delay Variation (ms)","KPI from->to",56,16
+"Max Delay Variation (ms)","KPI from->to",58,11
+"Max Delay Variation (ms)","KPI from->to",60,65
+"Max Delay Variation (ms)","KPI from->to",62,10
+"Max Delay Variation (ms)","KPI from->to",64,13
+"Max Delay Variation (ms)","KPI from->to",66,18
+"Max Delay Variation (ms)","KPI from->to",68,9
+"Max Delay Variation (ms)","KPI from->to",70,14
+"Max Delay Variation (ms)","KPI from->to",72,13
+"Max Delay Variation (ms)","KPI from->to",74,15
+"Max Delay Variation (ms)","KPI from->to",76,17
+"Max Delay Variation (ms)","KPI from->to",78,20
+"Max Delay Variation (ms)","KPI from->to",80,9
+"Max Delay Variation (ms)","KPI from->to",82,12
+"Max Delay Variation (ms)","KPI from->to",84,14
+"Max Delay Variation (ms)","KPI from->to",86,13
+"Max Delay Variation (ms)","KPI from->to",88,17
+"Max Delay Variation (ms)","KPI from->to",90,15
+"Max Delay Variation (ms)","KPI from->to",92,14
+"Max Delay Variation (ms)","KPI from->to",94,13
+"Max Delay Variation (ms)","KPI from->to",96,11
+"Max Delay Variation (ms)","KPI from->to",98,9
+"Max Delay Variation (ms)","KPI from->to",100,13
+
+Metric,"Pair Name",Timestamp,Value
+MOS,"KPI from->to",2,4.36
+MOS,"KPI from->to",4,4.36
+MOS,"KPI from->to",6,4.36
+MOS,"KPI from->to",8,4.36
+MOS,"KPI from->to",10,4.36
+MOS,"KPI from->to",12,4.36
+MOS,"KPI from->to",14,4.36
+MOS,"KPI from->to",16,4.36
+MOS,"KPI from->to",18,4.36
+MOS,"KPI from->to",20,4.36
+MOS,"KPI from->to",22,4.36
+MOS,"KPI from->to",24,4.36
+MOS,"KPI from->to",26,4.36
+MOS,"KPI from->to",28,4.36
+MOS,"KPI from->to",30,4.36
+MOS,"KPI from->to",32,4.36
+MOS,"KPI from->to",34,4.36
+MOS,"KPI from->to",36,4.36
+MOS,"KPI from->to",38,4.36
+MOS,"KPI from->to",40,4.36
+MOS,"KPI from->to",42,4.36
+MOS,"KPI from->to",44,4.36
+MOS,"KPI from->to",46,4.36
+MOS,"KPI from->to",48,4.36
+MOS,"KPI from->to",50,4.36
+MOS,"KPI from->to",52,4.36
+MOS,"KPI from->to",54,4.36
+MOS,"KPI from->to",56,4.36
+MOS,"KPI from->to",58,4.36
+MOS,"KPI from->to",60,3.47
+MOS,"KPI from->to",62,4.36
+MOS,"KPI from->to",64,4.36
+MOS,"KPI from->to",66,4.36
+MOS,"KPI from->to",68,4.36
+MOS,"KPI from->to",70,4.36
+MOS,"KPI from->to",72,4.36
+MOS,"KPI from->to",74,4.36
+MOS,"KPI from->to",76,4.36
+MOS,"KPI from->to",78,4.36
+MOS,"KPI from->to",80,4.36
+MOS,"KPI from->to",82,4.36
+MOS,"KPI from->to",84,4.36
+MOS,"KPI from->to",86,4.36
+MOS,"KPI from->to",88,4.36
+MOS,"KPI from->to",90,4.36
+MOS,"KPI from->to",92,4.36
+MOS,"KPI from->to",94,4.36
+MOS,"KPI from->to",96,4.36
+MOS,"KPI from->to",98,4.36
+MOS,"KPI from->to",100,4.36
+
+

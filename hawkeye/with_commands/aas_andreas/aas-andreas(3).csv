@@ -1,0 +1,394 @@
+"Test Information",Value
+"RUN ID",488
+"END EXECUTION TIME","2021-05-07 10:55:24"
+"SOURCE PROBE NAME",raspberrypi-AAS
+"SOURCE PROBE TEST IP ADDRESS",raspberrypi-AAS
+"SOURCE PROBE MANAGEMENT IP ADDRESS",raspberrypi-AAS
+"SOURCE PROBE GROUP",Administrators
+"DESTINATION PROBE NAME",andreas
+"DESTINATION PROBE TEST IP ADDRESS",andreas
+"DESTINATION PROBE MANAGEMENT IP ADDRESS",andreas
+"DESTINATION PROBE GROUP",Administrators
+"DESTINATION PROBE LOCATION",
+"TEST MODULE",MESH
+"TEST TYPE","Network KPI"
+"TEST ADDITIONAL INFORMATION"," DSCP Setting: Best Effort"
+"TEST DURATION",120
+"TEST STATUS",Failed
+"FAIL OR ERROR REASON"," Threshold failed on KPI from->to Jitter Max (ms) 
+ Threshold failed on KPI from->to Max Delay Variation (ms) 
+"
+
+Metric,"Pair Name",Value,"Threshold Type",Threshold,"Status KPI"
+"Datagrams Out of Order","KPI from->to",0.0,0,>=,Passed
+"Delay (ms)","KPI from->to",2.44,0,<=,Passed
+"Jitter (ms)","KPI from->to",0.88,0,<=,Passed
+"Jitter Max (ms)","KPI from->to",7.0,0,<=,Failed
+Loss,"KPI from->to",0.0,0,<=,Passed
+"Max Delay Variation (ms)","KPI from->to",100.0,0,<=,Failed
+"Max loss burst","KPI from->to",0.0,0,<=,Passed
+MOS,"KPI from->to",4.27,1,<=,Passed
+"Wi-Fi RSSI Average","Wi-Fi andreas",-40.0,-1,<=,Passed
+"Wi-Fi RSSI Minimum","Wi-Fi andreas",-43.0,-1,<=,Passed
+"Wi-Fi RSSI Maximum","Wi-Fi andreas",-36.0,-1,<=,Passed
+"Wi-Fi Link Speed Average (Mbps)","Wi-Fi andreas",167.6271186440678,-1,<=,Passed
+"Wi-Fi BSSID","Wi-Fi andreas",fc:5b:39:c7:c3:4f,,,Passed
+"Wi-Fi SSID","Wi-Fi andreas",eduroam,,,Passed
+
+Metric,"Pair Name",Timestamp,Value
+"Jitter (ms)","KPI from->to",2,0
+"Jitter (ms)","KPI from->to",4,1
+"Jitter (ms)","KPI from->to",6,0
+"Jitter (ms)","KPI from->to",8,0
+"Jitter (ms)","KPI from->to",10,1
+"Jitter (ms)","KPI from->to",12,0
+"Jitter (ms)","KPI from->to",14,3
+"Jitter (ms)","KPI from->to",16,0
+"Jitter (ms)","KPI from->to",18,1
+"Jitter (ms)","KPI from->to",20,0
+"Jitter (ms)","KPI from->to",22,1
+"Jitter (ms)","KPI from->to",24,0
+"Jitter (ms)","KPI from->to",26,0
+"Jitter (ms)","KPI from->to",28,0
+"Jitter (ms)","KPI from->to",30,0
+"Jitter (ms)","KPI from->to",32,0
+"Jitter (ms)","KPI from->to",34,0
+"Jitter (ms)","KPI from->to",36,0
+"Jitter (ms)","KPI from->to",38,1
+"Jitter (ms)","KPI from->to",40,1
+"Jitter (ms)","KPI from->to",42,0
+"Jitter (ms)","KPI from->to",44,0
+"Jitter (ms)","KPI from->to",46,1
+"Jitter (ms)","KPI from->to",48,1
+"Jitter (ms)","KPI from->to",50,0
+"Jitter (ms)","KPI from->to",52,0
+"Jitter (ms)","KPI from->to",54,1
+"Jitter (ms)","KPI from->to",56,0
+"Jitter (ms)","KPI from->to",58,0
+"Jitter (ms)","KPI from->to",60,1
+"Jitter (ms)","KPI from->to",62,0
+"Jitter (ms)","KPI from->to",64,0
+"Jitter (ms)","KPI from->to",66,1
+"Jitter (ms)","KPI from->to",68,0
+"Jitter (ms)","KPI from->to",70,6
+"Jitter (ms)","KPI from->to",72,0
+"Jitter (ms)","KPI from->to",74,0
+"Jitter (ms)","KPI from->to",76,0
+"Jitter (ms)","KPI from->to",78,0
+"Jitter (ms)","KPI from->to",80,1
+"Jitter (ms)","KPI from->to",82,4
+"Jitter (ms)","KPI from->to",84,3
+"Jitter (ms)","KPI from->to",86,2
+"Jitter (ms)","KPI from->to",88,1
+"Jitter (ms)","KPI from->to",90,1
+"Jitter (ms)","KPI from->to",92,0
+"Jitter (ms)","KPI from->to",94,0
+"Jitter (ms)","KPI from->to",96,0
+"Jitter (ms)","KPI from->to",98,0
+"Jitter (ms)","KPI from->to",100,0
+
+Metric,"Pair Name",Timestamp,Value
+MOS,"KPI from->to",2,4.37
+MOS,"KPI from->to",4,3.5
+MOS,"KPI from->to",6,4.37
+MOS,"KPI from->to",8,4.37
+MOS,"KPI from->to",10,4.37
+MOS,"KPI from->to",12,4.37
+MOS,"KPI from->to",14,4.37
+MOS,"KPI from->to",16,4.37
+MOS,"KPI from->to",18,3.49
+MOS,"KPI from->to",20,4.37
+MOS,"KPI from->to",22,4.37
+MOS,"KPI from->to",24,4.37
+MOS,"KPI from->to",26,4.37
+MOS,"KPI from->to",28,4.37
+MOS,"KPI from->to",30,4.37
+MOS,"KPI from->to",32,4.37
+MOS,"KPI from->to",34,4.37
+MOS,"KPI from->to",36,4.37
+MOS,"KPI from->to",38,4.37
+MOS,"KPI from->to",40,4.37
+MOS,"KPI from->to",42,4.37
+MOS,"KPI from->to",44,4.37
+MOS,"KPI from->to",46,4.37
+MOS,"KPI from->to",48,4.37
+MOS,"KPI from->to",50,4.37
+MOS,"KPI from->to",52,4.37
+MOS,"KPI from->to",54,4.37
+MOS,"KPI from->to",56,4.37
+MOS,"KPI from->to",58,4.37
+MOS,"KPI from->to",60,3.5
+MOS,"KPI from->to",62,4.37
+MOS,"KPI from->to",64,4.37
+MOS,"KPI from->to",66,4.37
+MOS,"KPI from->to",68,4.37
+MOS,"KPI from->to",70,4.37
+MOS,"KPI from->to",72,4.37
+MOS,"KPI from->to",74,4.37
+MOS,"KPI from->to",76,4.37
+MOS,"KPI from->to",78,4.37
+MOS,"KPI from->to",80,4.37
+MOS,"KPI from->to",82,3.48
+MOS,"KPI from->to",84,4.37
+MOS,"KPI from->to",86,4.37
+MOS,"KPI from->to",88,4.37
+MOS,"KPI from->to",90,4.37
+MOS,"KPI from->to",92,4.37
+MOS,"KPI from->to",94,3.5
+MOS,"KPI from->to",96,4.37
+MOS,"KPI from->to",98,4.37
+MOS,"KPI from->to",100,4.37
+
+Metric,"Pair Name",Timestamp,Value
+"Jitter (ms)","KPI from->to",102,3
+"Jitter (ms)","KPI from->to",104,2
+"Jitter (ms)","KPI from->to",106,2
+"Jitter (ms)","KPI from->to",108,0
+"Jitter (ms)","KPI from->to",110,0
+"Jitter (ms)","KPI from->to",112,7
+"Jitter (ms)","KPI from->to",114,4
+"Jitter (ms)","KPI from->to",116,2
+"Jitter (ms)","KPI from->to",118,0
+
+Metric,"Pair Name",Timestamp,Value
+Loss,"KPI from->to",102,0
+Loss,"KPI from->to",104,0
+Loss,"KPI from->to",106,0
+Loss,"KPI from->to",108,0
+Loss,"KPI from->to",110,0
+Loss,"KPI from->to",112,0
+Loss,"KPI from->to",114,0
+Loss,"KPI from->to",116,0
+Loss,"KPI from->to",118,0
+
+Metric,"Pair Name",Timestamp,Value
+"Max Delay Variation (ms)","KPI from->to",2,16
+"Max Delay Variation (ms)","KPI from->to",4,50
+"Max Delay Variation (ms)","KPI from->to",6,17
+"Max Delay Variation (ms)","KPI from->to",8,3
+"Max Delay Variation (ms)","KPI from->to",10,14
+"Max Delay Variation (ms)","KPI from->to",12,16
+"Max Delay Variation (ms)","KPI from->to",14,40
+"Max Delay Variation (ms)","KPI from->to",16,14
+"Max Delay Variation (ms)","KPI from->to",18,100
+"Max Delay Variation (ms)","KPI from->to",20,3
+"Max Delay Variation (ms)","KPI from->to",22,12
+"Max Delay Variation (ms)","KPI from->to",24,3
+"Max Delay Variation (ms)","KPI from->to",26,32
+"Max Delay Variation (ms)","KPI from->to",28,4
+"Max Delay Variation (ms)","KPI from->to",30,4
+"Max Delay Variation (ms)","KPI from->to",32,3
+"Max Delay Variation (ms)","KPI from->to",34,3
+"Max Delay Variation (ms)","KPI from->to",36,3
+"Max Delay Variation (ms)","KPI from->to",38,37
+"Max Delay Variation (ms)","KPI from->to",40,15
+"Max Delay Variation (ms)","KPI from->to",42,13
+"Max Delay Variation (ms)","KPI from->to",44,14
+"Max Delay Variation (ms)","KPI from->to",46,4
+"Max Delay Variation (ms)","KPI from->to",48,35
+"Max Delay Variation (ms)","KPI from->to",50,3
+"Max Delay Variation (ms)","KPI from->to",52,3
+"Max Delay Variation (ms)","KPI from->to",54,13
+"Max Delay Variation (ms)","KPI from->to",56,18
+"Max Delay Variation (ms)","KPI from->to",58,17
+"Max Delay Variation (ms)","KPI from->to",60,43
+"Max Delay Variation (ms)","KPI from->to",62,4
+"Max Delay Variation (ms)","KPI from->to",64,3
+"Max Delay Variation (ms)","KPI from->to",66,5
+"Max Delay Variation (ms)","KPI from->to",68,5
+"Max Delay Variation (ms)","KPI from->to",70,38
+"Max Delay Variation (ms)","KPI from->to",72,3
+"Max Delay Variation (ms)","KPI from->to",74,2
+"Max Delay Variation (ms)","KPI from->to",76,3
+"Max Delay Variation (ms)","KPI from->to",78,3
+"Max Delay Variation (ms)","KPI from->to",80,18
+"Max Delay Variation (ms)","KPI from->to",82,46
+"Max Delay Variation (ms)","KPI from->to",84,18
+"Max Delay Variation (ms)","KPI from->to",86,17
+"Max Delay Variation (ms)","KPI from->to",88,17
+"Max Delay Variation (ms)","KPI from->to",90,4
+"Max Delay Variation (ms)","KPI from->to",92,3
+"Max Delay Variation (ms)","KPI from->to",94,41
+"Max Delay Variation (ms)","KPI from->to",96,3
+"Max Delay Variation (ms)","KPI from->to",98,4
+"Max Delay Variation (ms)","KPI from->to",100,4
+
+Metric,"Pair Name",Timestamp,Value
+"Delay (ms)","KPI from->to",2,1
+"Delay (ms)","KPI from->to",4,3
+"Delay (ms)","KPI from->to",6,2
+"Delay (ms)","KPI from->to",8,1
+"Delay (ms)","KPI from->to",10,1
+"Delay (ms)","KPI from->to",12,1
+"Delay (ms)","KPI from->to",14,3
+"Delay (ms)","KPI from->to",16,2
+"Delay (ms)","KPI from->to",18,5
+"Delay (ms)","KPI from->to",20,2
+"Delay (ms)","KPI from->to",22,2
+"Delay (ms)","KPI from->to",24,2
+"Delay (ms)","KPI from->to",26,2
+"Delay (ms)","KPI from->to",28,2
+"Delay (ms)","KPI from->to",30,2
+"Delay (ms)","KPI from->to",32,1
+"Delay (ms)","KPI from->to",34,2
+"Delay (ms)","KPI from->to",36,1
+"Delay (ms)","KPI from->to",38,2
+"Delay (ms)","KPI from->to",40,2
+"Delay (ms)","KPI from->to",42,1
+"Delay (ms)","KPI from->to",44,2
+"Delay (ms)","KPI from->to",46,2
+"Delay (ms)","KPI from->to",48,2
+"Delay (ms)","KPI from->to",50,2
+"Delay (ms)","KPI from->to",52,2
+"Delay (ms)","KPI from->to",54,2
+"Delay (ms)","KPI from->to",56,2
+"Delay (ms)","KPI from->to",58,2
+"Delay (ms)","KPI from->to",60,2
+"Delay (ms)","KPI from->to",62,1
+"Delay (ms)","KPI from->to",64,2
+"Delay (ms)","KPI from->to",66,2
+"Delay (ms)","KPI from->to",68,2
+"Delay (ms)","KPI from->to",70,8
+"Delay (ms)","KPI from->to",72,2
+"Delay (ms)","KPI from->to",74,1
+"Delay (ms)","KPI from->to",76,2
+"Delay (ms)","KPI from->to",78,1
+"Delay (ms)","KPI from->to",80,3
+"Delay (ms)","KPI from->to",82,7
+"Delay (ms)","KPI from->to",84,4
+"Delay (ms)","KPI from->to",86,2
+"Delay (ms)","KPI from->to",88,9
+"Delay (ms)","KPI from->to",90,1
+"Delay (ms)","KPI from->to",92,1
+"Delay (ms)","KPI from->to",94,2
+"Delay (ms)","KPI from->to",96,2
+"Delay (ms)","KPI from->to",98,1
+"Delay (ms)","KPI from->to",100,1
+
+Metric,"Pair Name",Timestamp,Value
+"Max Delay Variation (ms)","KPI from->to",102,20
+"Max Delay Variation (ms)","KPI from->to",104,46
+"Max Delay Variation (ms)","KPI from->to",106,23
+"Max Delay Variation (ms)","KPI from->to",108,3
+"Max Delay Variation (ms)","KPI from->to",110,2
+"Max Delay Variation (ms)","KPI from->to",112,19
+"Max Delay Variation (ms)","KPI from->to",114,22
+"Max Delay Variation (ms)","KPI from->to",116,43
+"Max Delay Variation (ms)","KPI from->to",118,32
+
+Metric,"Pair Name",Timestamp,Value
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",2,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",4,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",6,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",8,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",10,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",12,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",14,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",16,144
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",18,144
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",20,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",22,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",24,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",26,156
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",28,156
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",30,156
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",32,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",34,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",36,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",38,144
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",40,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",42,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",44,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",46,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",48,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",50,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",52,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",54,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",56,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",58,156
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",60,130
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",62,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",64,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",66,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",68,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",70,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",72,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",74,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",76,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",78,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",80,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",82,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",84,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",86,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",88,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",90,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",92,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",94,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",96,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",98,173
+"Wi-Fi Link Speed (Mbps)","Wi-Fi andreas",100,156
+
+Metric,"Pair Name",Timestamp,Value
+"Delay (ms)","KPI from->to",102,3
+"Delay (ms)","KPI from->to",104,4
+"Delay (ms)","KPI from->to",106,4
+"Delay (ms)","KPI from->to",108,2
+"Delay (ms)","KPI from->to",110,1
+"Delay (ms)","KPI from->to",112,4
+"Delay (ms)","KPI from->to",114,5
+"Delay (ms)","KPI from->to",116,6
+"Delay (ms)","KPI from->to",118,3
+
+Metric,"Pair Name",Timestamp,Value
+Loss,"KPI from->to",2,0
+Loss,"KPI from->to",4,0
+Loss,"KPI from->to",6,0
+Loss,"KPI from->to",8,0
+Loss,"KPI from->to",10,0
+Loss,"KPI from->to",12,0
+Loss,"KPI from->to",14,0
+Loss,"KPI from->to",16,0
+Loss,"KPI from->to",18,0
+Loss,"KPI from->to",20,0
+Loss,"KPI from->to",22,0
+Loss,"KPI from->to",24,0
+Loss,"KPI from->to",26,0
+Loss,"KPI from->to",28,0
+Loss,"KPI from->to",30,0
+Loss,"KPI from->to",32,0
+Loss,"KPI from->to",34,0
+Loss,"KPI from->to",36,0
+Loss,"KPI from->to",38,0
+Loss,"KPI from->to",40,0
+Loss,"KPI from->to",42,0
+Loss,"KPI from->to",44,0
+Loss,"KPI from->to",46,0
+Loss,"KPI from->to",48,0
+Loss,"KPI from->to",50,0
+Loss,"KPI from->to",52,0
+Loss,"KPI from->to",54,0
+Loss,"KPI from->to",56,0
+Loss,"KPI from->to",58,0
+Loss,"KPI from->to",60,0
+Loss,"KPI from->to",62,0
+Loss,"KPI from->to",64,0
+Loss,"KPI from->to",66,0
+Loss,"KPI from->to",68,0
+Loss,"KPI from->to",70,0
+Loss,"KPI from->to",72,0
+Loss,"KPI from->to",74,0
+Loss,"KPI from->to",76,0
+Loss,"KPI from->to",78,0
+Loss,"KPI from->to",80,0
+Loss,"KPI from->to",82,0
+Loss,"KPI from->to",84,0
+Loss,"KPI from->to",86,0
+Loss,"KPI from->to",88,0
+Loss,"KPI from->to",90,0
+Loss,"KPI from->to",92,0
+Loss,"KPI from->to",94,0
+Loss,"KPI from->to",96,0
+Loss,"KPI from->to",98,0
+Loss,"KPI from->to",100,0
+
+
