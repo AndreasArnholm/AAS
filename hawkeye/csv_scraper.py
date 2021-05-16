@@ -58,7 +58,7 @@ def get_data_from_csv(csvdir):
 
         avg = sum(results)/len(results)
 
-        legend = "From " + key.split(":")[0] + " to " + key.split(":")[1] + ", Average: " + str(round(avg, 3)) + " ms" + "TITLE" + title 
+        legend = "From " + key.split(":")[0] + " to " + key.split(":")[1] + ", Average: " + str(round(avg, 3)) + " ms" + " : " + title 
 
         return_dict[legend] = time_value_dict
 
@@ -69,38 +69,80 @@ def movingaverage(interval, window_size):
     window = np.ones(int(window_size))/float(window_size)
     return np.convolve(interval, window, 'same')
 
-window_size = 100
 
 def plotcsvdir(csvdir):
     dict_ = get_data_from_csv(csvdir)
     plt.rcParams["figure.figsize"] = (8,6)
     legends = []
+    window_size = 100
 
     sorted_dict = sorted(dict_)
-
+    plt.xlabel("Time since start [s]")
+    plt.ylabel("Delay [ms]")
+    plt.xlim(0, 3200)
+    plt.ylim(0, 45)
     title = None
 
     for d in sorted_dict:
-        legend, title = d.split("TITLE")
+        legend, title = d.split(" : ")
         legends.append(legend)
-        plt.xlabel("Time since start [s]")
-        plt.ylabel("Delay [ms]")
         tuple_x_y = [(k,int(v)) for k, v in sorted(dict_[d].items(), key=lambda item: item[0])]
         x_vals = [x[0] for x in tuple_x_y]
         y_vals = [x[1] for x in tuple_x_y]
         y_av = movingaverage(y_vals, window_size)
         x_vals = x_vals[int(window_size/2):][:-int(window_size/2)]
         y_av = y_av[int(window_size/2):][:-int(window_size/2)]
-        plt.title(title)
         plt.plot(x_vals, y_av)
-        plt.xlim(0, 3200)
-        plt.ylim(0, 45)
-        plt.legend(legends)
         
+    plt.title(title)
+    plt.legend(legends)    
     plt.savefig(title)
-    plt.show()
+    #plt.show()
+    plt.clf()
 
-plotcsvdir("Lab_no_commands")
-plotcsvdir("Lab_with_commands")
-plotcsvdir("Office_no_commands")
-plotcsvdir("Office_with_commands")
+def compare_dir(dirs, route_to_compare):
+
+    legends = []
+    plt.rcParams["figure.figsize"] = (8,6)
+    plt.xlabel("Time since start [s]")
+    plt.ylabel("Delay [ms]")
+    window_size = 100
+    plt.xlim(0, 3200)
+    plt.ylim(0, 45)
+    plt.title(route_to_compare)
+
+    for dir_ in dirs:
+        csvdict = get_data_from_csv(dir_)
+        for key in csvdict:
+            if key.split(",")[0] == route_to_compare:
+                splitting = key.split(",")[1].split(" : ")
+                legends.append(splitting[1] + ", " +  splitting[0])
+                tuple_x_y = [(k,int(v)) for k, v in sorted(csvdict[key].items(), key=lambda item: item[0])]
+                x_vals = [x[0] for x in tuple_x_y]
+                y_vals = [x[1] for x in tuple_x_y]
+                y_av = movingaverage(y_vals, window_size)
+                x_vals = x_vals[int(window_size/2):][:-int(window_size/2)]
+                y_av = y_av[int(window_size/2):][:-int(window_size/2)]
+                plt.plot(x_vals, y_av)
+                
+    plt.legend(legends)
+    plt.savefig("comparison_" + route_to_compare)
+    #plt.show()
+    plt.clf()
+
+def plot_induvidual_files():
+    plotcsvdir("Lab_no_commands")
+    plotcsvdir("Lab_with_commands")
+    plotcsvdir("Office_no_commands")
+    plotcsvdir("Office_with_commands")
+
+def plot_comparisons():
+    dirs = ["Office_no_commands", "Office_with_commands", "Lab_no_commands", "Lab_with_commands"]
+    compare_dir(dirs, "From raspberrypi-5G to raspberrypi-AAS")
+    compare_dir(dirs, "From raspberrypi-AAS to raspberrypi-5G")
+    compare_dir(dirs, "From andreas to raspberrypi-AAS")
+    compare_dir(dirs, "From raspberrypi-AAS to andreas")
+
+
+#plot_induvidual_files()
+plot_comparisons()
